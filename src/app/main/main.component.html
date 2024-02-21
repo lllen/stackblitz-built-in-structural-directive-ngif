@@ -1,0 +1,6 @@
+<span>isError: {{ isError }}</span>
+
+<p *ngIf="isError" class="error-msg">This is error message!</p>
+<p *ngIf="!isError">This is simple message!</p>
+
+<button (click)="toggleError()">Toggle error message</button>
