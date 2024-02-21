@@ -1,6 +1,3 @@
-<span>isError: {{ isError }}</span>
+<button (click)="generateNewNumber()">Toggle new number</button>
 
-<p *ngIf="isError" class="error-msg">This is error message!</p>
-<p *ngIf="!isError">This is simple message!</p>
-
-<button (click)="toggleError()">Toggle error message</button>
+<div *ngFor="let number of arr">This is a random numer: {{ number }}</div>

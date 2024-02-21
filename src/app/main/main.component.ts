@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './main.component.css'
 })
 export class MainComponent {
-  isError = true;
+  arr = [1, 4, 62, 5, 2, 5];
 
-  toggleError() {
-    this.isError = !this.isError;
+  generateNewNumber() {
+    this.arr.push(Math.floor(Math.random() * 100));
   }
 }
