@@ -1,3 +1,7 @@
-button {
+select {
   cursor: pointer;
+}
+
+.default-text {
+  color: grey;
 }

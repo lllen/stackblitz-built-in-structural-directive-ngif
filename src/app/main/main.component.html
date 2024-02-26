@@ -1,3 +1,23 @@
-<button (click)="generateNewNumber()">Toggle new number</button>
-
-<div *ngFor="let number of arr">This is a random numer: {{ number }}</div>
+<select [(ngModel)]="selectedValue" name="options">
+    <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+</select>
+<br/>
+<br/>
+<br/>
+<div [ngSwitch]="selectedValue">
+    <div *ngSwitchCase="'Asia'">
+        <img width="150px" height="150px" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Asia_%28orthographic_projection%29_without_New_Guinea.svg" />
+    </div>
+    <div *ngSwitchCase="'Europe'">
+        <img width="150px" height="150px" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Europe_orthographic_Caucasus_Urals_boundary_%28with_borders%29.svg" />
+    </div>
+    <div *ngSwitchCase="'Australia'">
+        <img width="150px" height="150px" src="https://upload.wikimedia.org/wikipedia/commons/d/da/Australia_with_AAT_%28orthographic_projection%29.svg" />
+    </div>
+    <div *ngSwitchCase="'South America'">
+        <img width="150px" height="150px" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/South_America_%28orthographic_projection%29.svg" />
+    </div>
+    <div *ngSwitchDefault>
+        <span class="default-text">Select continent to see the pic</span>
+    </div>
+  </div>
