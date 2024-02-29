@@ -1,3 +1,7 @@
+.message-error {
+  color: red;
+}
+
 button {
   cursor: pointer;
 }

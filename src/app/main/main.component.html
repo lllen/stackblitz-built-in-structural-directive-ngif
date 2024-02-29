@@ -1,3 +1,10 @@
-<button (click)="generateNewNumber()">Toggle new number</button>
-
-<div *ngFor="let number of arr">This is a random numer: {{ number }}</div>
+<p [ngClass]="isErrorMessage ? 'message-error' : 'message'">{{ message }}</p>
+<button (click)="toggleClass()">Toggle class</button>
+<br />
+<br />
+<br />
+<br />
+<p [ngStyle]="{'background-color': backgroundColor, 'color': textColor, 'font-style': fontStyle}">
+    This text's styles change based on component properties.
+</p>
+<button (click)="toggleStyles()">Toggle styles</button>
